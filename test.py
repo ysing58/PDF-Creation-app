@@ -14,7 +14,8 @@ for index, row in df.iterrows():
         pdf.set_font(family="Times", style="B", size=24)
         pdf.set_text_color(100,100,100)
         pdf.cell(h=12, w=0, align="L", ln=1, border=0, txt=row["Topic"])
-        pdf.line(10, 22, 200, 22)
+        for j in range(20, 275, 10):
+            pdf.line(10, j, 200, j)
         pdf.ln(265)
         pdf.set_font(family="Times", style="B", size=12)
         pdf.set_text_color(100, 100, 100)
